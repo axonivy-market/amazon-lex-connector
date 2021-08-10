@@ -28,7 +28,7 @@ jobs:
     - name: Build with Maven
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: mvn --batch-mode release:prepare release:perform
+      run: mvn --batch-mode -Darguments="-Daws.access.key=${{ secrets.AMAZON_ACCESS_KEY }} -Daws.secret.key=${{ secrets.AMAZON_SECRET_KEY }}" release:prepare release:perform
 
     - name: Create pull request
       uses: repo-sync/pull-request@v2

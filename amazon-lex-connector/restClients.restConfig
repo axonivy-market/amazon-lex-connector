@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restClients>
+    <restClient>
+        <uuid>13f7783c-cd64-4625-a663-82b504bd4195</uuid>
+        <name>Amazon Lex (Amazon Lex Runtime V2)</name>
+        <description>Amazon Lex is a service for building conversational interfaces into any application using voice and text. &#13;
+Amazon Lex provides the advanced deep learning functionalities of automatic speech recognition (ASR)&#13;
+for converting speech to text, and natural language understanding (NLU) to recognize the intent of the text, &#13;
+to enable you to build applications with highly engaging user experiences and lifelike conversational interactions. &#13;
+With Amazon Lex, the same deep learning technologies that power Amazon Alexa are now available &#13;
+to any developer, enabling you to quickly and easily build sophisticated, natural language, conversational bots (“chatbots”).</description>
+        <icon>res:/webContent/icons/AmazonLex.png</icon>
+        <configuration>
+            <uri>https://runtime-v2-lex.eu-central-1.amazonaws.com</uri>
+            <property>
+                <name>serviceName</name>
+                <value>lex</value>
+                <password>false</password>
+            </property>
+            <property>
+                <name>regionName</name>
+                <value>eu-central-1</value>
+                <password>false</password>
+            </property>
+            <feature>
+                <class>ch.ivyteam.ivy.rest.client.mapper.JsonFeature</class>
+            </feature>
+            <feature>
+                <class>com.axonivy.connector.aws.authentication.Aws4AuthenticationFeature</class>
+            </feature>
+        </configuration>
+    </restClient>
+</restClients>

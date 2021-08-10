@@ -19,7 +19,7 @@ jobs:
         java-version: 11
 
     - name: Build with Maven
-      run: mvn clean verify --batch-mode
+      run: mvn clean verify --batch-mode -Daws.access.key=${{ secrets.AMAZON_ACCESS_KEY }} -Daws.secret.key=${{ secrets.AMAZON_SECRET_KEY }}
 
     - name: Publish Unit Test Results
       uses: EnricoMi/publish-unit-test-result-action@v1

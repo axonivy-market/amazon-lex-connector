@@ -1,0 +1,23 @@
+# == Variables ==
+# 
+# You can define here your project Variables.
+# If you want to define/override a Variable for a specific Environment, 
+# please add a 'variables.yaml' in the sub directory '_<environment>'.
+#
+Variables:
+  
+  Amazon.Lex:
+
+    # Secret key to access amazon lex
+    # [password] 
+    SecretKey: ""
+    
+    # Access key to access amazon lex
+    # [password]
+    AccessKey: ""
+    
+    # Identifier of the amazon lex bot alias that should be called
+    BotAliasId: ""
+    
+    # Identifier of the amazon lex bot that should be called
+    BotId: ""

@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/layouts/basic-8.xhtml">
+		<ui:define name="title">Amazon Lex Chat Bot</ui:define>
+		<ui:define name="content">
+			<p:focus for="form:input" />
+			<p:graphicImage library="ivy-webcontent" name="icons/AmazonLex.png" />
+			<p>This is a chat bot based on Amazon Lex.</p>
+			<p>It can help you book a hotel or a car. Ask the bot to book a
+				hotel or a car to start the communication. The bot is a US american,
+				he knows only cities in the US.</p>
+			<h:form id="form">
+				<p:messages />
+				<div id="form:chat" style="font-size: 14pt">
+					<ui:repeat value="#{data.messages}" var="message">
+						<div>
+							<i class="#{message.icon}" />
+							<p:outputLabel value=" #{message.what}" />
+						</div>
+					</ui:repeat>
+				</div>
+				<p:panelGrid columns="2" layout="grid"
+					styleClass="ui-panelgrid-blank"
+					columnClasses="ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4, 
+						ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4">
+					<p:inputText id="input" value="#{data.input}" />
+					<p:commandButton id="send" value="Send"
+						actionListener="#{logic.send}" update="form"
+						icon="si si-conversation-chat-2" disabled="#{data.finished}" />
+
+				</p:panelGrid>
+				<p:panelGrid columns="2" layout="grid"
+					styleClass="ui-panelgrid-blank" rendered="#{data.finished}"
+					columnClasses="ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4, 
+						ui-g-12 ui-md-3 ui-lg-2, 
+						ui-g-12 ui-md-9 ui-lg-4">
+					<p:outputLabel value="Confirmation" />
+					<p:outputLabel id="confirmation" value="#{data.confirmation}" />
+				</p:panelGrid>
+
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

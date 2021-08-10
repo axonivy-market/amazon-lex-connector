@@ -1,0 +1,12 @@
+ChatBotData #class
+com.axonivy.connector.amazon.lex.demo.ChatBot #namespace
+messages List<com.axonivy.connector.amazon.lex.demo.Message> #field
+messages PERSISTENT #fieldModifier
+input String #field
+input PERSISTENT #fieldModifier
+sessionId String #field
+sessionId PERSISTENT #fieldModifier
+finished Boolean #field
+finished PERSISTENT #fieldModifier
+confirmation String #field
+confirmation PERSISTENT #fieldModifier
