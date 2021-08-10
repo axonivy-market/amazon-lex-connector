@@ -17,11 +17,6 @@ to any developer, enabling you to quickly and easily build sophisticated, natura
                 <value>lex</value>
                 <password>false</password>
             </property>
-            <property>
-                <name>regionName</name>
-                <value>eu-central-1</value>
-                <password>false</password>
-            </property>
             <feature>
                 <class>ch.ivyteam.ivy.rest.client.mapper.JsonFeature</class>
             </feature>
