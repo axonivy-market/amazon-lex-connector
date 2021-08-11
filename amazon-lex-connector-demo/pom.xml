@@ -14,6 +14,14 @@
       <type>iar</type>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/axonivy-market/amazon-lex-connector</url>
+    </repository>
+  </distributionManagement>
+
   <build>
     <plugins>
       <plugin>
