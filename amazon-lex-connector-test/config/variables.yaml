@@ -7,14 +7,6 @@
 Variables:
 
   Amazon.Lex:
-  
-    # Secret key to access amazon lex
-    # [password] 
-    SecretKey: ""
-    
-    # Access key to access amazon lex
-    # [password]
-    AccessKey: ""
 
     # Identifier of the amazon lex bot alias that should be called
     BotAliasId: "GXHT5U6V6K"

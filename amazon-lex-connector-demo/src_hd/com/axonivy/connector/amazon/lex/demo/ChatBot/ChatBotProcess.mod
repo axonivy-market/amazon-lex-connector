@@ -84,45 +84,20 @@ Cs0 f6 bodyObjectType com.amazonaws.lex.runtime.v2.SessionIdTextBody #txt
 Cs0 f6 bodyObjectMapping 'param.text=in.input;
 ' #txt
 Cs0 f6 resultType com.amazonaws.lex.runtime.v2.RecognizeTextResponse #txt
-Cs0 f6 responseCode 'import com.amazonaws.lex.runtime.v2.RecognizeTextResponseIntent;
-import com.amazonaws.lex.runtime.v2.RecognizeTextResponseInterpretations;
+Cs0 f6 responseCode 'import com.amazonaws.lex.runtime.v2.Intent;
+import com.axonivy.connector.amazon.lex.connector.BotResponse;
 import com.axonivy.connector.amazon.lex.demo.Message;
-import java.util.Map;
-if (result.#messages is initialized)
-{
+
+List<String> messages = BotResponse.messages(result);
+if (!messages.isEmpty()) {
 	Message message;
-	message.what = result.messages.get(0).content as String;
+	message.what = messages.get(0);
 	message.icon = "si si-messages-bubble";
 	out.messages.add(message);
-}
-else
-{
-	Map slots;
-  String intentName;
-	for (RecognizeTextResponseInterpretations interpretation : result.interpretations)
-	{
-	  RecognizeTextResponseIntent intent = interpretation.intent;
-	  String state = intent.state as String;
-	  ivy.log.info("State: "+ #state);
-	  if (#state is initialized && state == "ReadyForFulfillment")
-	  {
-	    intentName = intent.name as String;
-	    slots = intent.slots as Map;
-	    break;
-	  }
-	}
-	if (#intentName is initialized)
-	{	  
-	  out.finished = true;
-		out.confirmation = intentName + " ";
-	  for (String name : slots.keySet())
-	  {
-			Map slot = slots.get(name) as Map;
-	    Map value = slot.get("value") as Map;
-	    String v = value.get("interpretedValue") as String;
-	    out.confirmation += name + "=" + v + ", ";
-   	}
-  }
+} else if (BotResponse.getIntent(result) is initialized) {
+	Intent intent = BotResponse.getIntent(result);
+	out.confirmation = BotResponse.stringify(intent);
+	out.finished = true;
 }
 in.input = "";' #txt
 Cs0 f6 clientErrorCode ivy:error:rest:client #txt
