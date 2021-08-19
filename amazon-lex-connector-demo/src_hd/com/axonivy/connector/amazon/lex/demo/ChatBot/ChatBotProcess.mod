@@ -85,7 +85,7 @@ Cs0 f6 bodyObjectMapping 'param.text=in.input;
 ' #txt
 Cs0 f6 resultType com.amazonaws.lex.runtime.v2.RecognizeTextResponse #txt
 Cs0 f6 responseCode 'import com.amazonaws.lex.runtime.v2.Intent;
-import com.amazon.lex.connector.BotResponse;
+import com.axonivy.connector.amazon.lex.connector.BotResponse;
 import com.axonivy.connector.amazon.lex.demo.Message;
 
 List<String> messages = BotResponse.messages(result);
