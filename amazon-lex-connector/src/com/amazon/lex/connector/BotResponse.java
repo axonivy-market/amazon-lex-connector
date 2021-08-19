@@ -1,4 +1,4 @@
-package com.amazone.lex.connector;
+package com.amazon.lex.connector;
 
 import java.util.Collections;
 import java.util.EnumSet;
