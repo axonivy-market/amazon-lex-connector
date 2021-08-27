@@ -3,7 +3,7 @@
   <groupId>com.axonivy.connector.amazon.lex</groupId>
   <name>amazon-lex-connector</name><!-- fill your product name -->
   <artifactId>amazon-lex-connector-modules</artifactId><!-- fill your product name + a "-modules" postfix -->
-  <version>9.2.1-SNAPSHOT</version>
+  <version>9.2.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
