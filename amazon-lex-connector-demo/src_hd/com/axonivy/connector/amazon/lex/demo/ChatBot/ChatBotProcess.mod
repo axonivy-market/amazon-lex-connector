@@ -75,9 +75,6 @@ botId=ivy.var.Amazon_Lex_BotId;
 sessionId=in.sessionId;
 localeId="en_US";
 ' #txt
-Cs0 f6 properties 'accessKey=ivy.var.Amazon_Lex_AccessKey;
-secretKey=ivy.var.Amazon_Lex_SecretKey;
-' #txt
 Cs0 f6 method POST #txt
 Cs0 f6 bodyInputType ENTITY #txt
 Cs0 f6 bodyObjectType com.amazonaws.lex.runtime.v2.SessionIdTextBody #txt

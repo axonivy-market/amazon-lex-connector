@@ -14,3 +14,5 @@ RestClients:
     - com.axonivy.connector.aws.authentication.Aws4AuthenticationFeature
     Properties:
       serviceName: lex
+      accessKey: ${ivy.var.Amazon.Lex.AccessKey}
+      secretKey: ${ivy.var.Amazon.Lex.SecretKey}
