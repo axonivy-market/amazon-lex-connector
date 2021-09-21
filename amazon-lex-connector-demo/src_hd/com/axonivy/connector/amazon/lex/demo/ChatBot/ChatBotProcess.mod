@@ -1,5 +1,5 @@
 [Ivy]
-17B2F6BE1C69F667 9.2.0 #module
+17B2F6BE1C69F667 9.3.0 #module
 >Proto >Proto Collection #zClass
 Cs0 ChatBotProcess Big #zClass
 Cs0 RD #cInfo
