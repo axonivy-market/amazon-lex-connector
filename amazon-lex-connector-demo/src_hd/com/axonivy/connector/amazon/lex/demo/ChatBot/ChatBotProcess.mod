@@ -1,5 +1,5 @@
 [Ivy]
-17B2F6BE1C69F667 9.2.0 #module
+17B2F6BE1C69F667 9.3.0 #module
 >Proto >Proto Collection #zClass
 Cs0 ChatBotProcess Big #zClass
 Cs0 RD #cInfo
@@ -74,9 +74,6 @@ Cs0 f6 templateParams 'botAliasId=ivy.var.Amazon_Lex_BotAliasId;
 botId=ivy.var.Amazon_Lex_BotId;
 sessionId=in.sessionId;
 localeId="en_US";
-' #txt
-Cs0 f6 properties 'accessKey=ivy.var.Amazon_Lex_AccessKey;
-secretKey=ivy.var.Amazon_Lex_SecretKey;
 ' #txt
 Cs0 f6 method POST #txt
 Cs0 f6 bodyInputType ENTITY #txt
