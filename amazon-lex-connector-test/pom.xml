@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.amazon.lex</groupId>
   <artifactId>amazon-lex-connector-test</artifactId>
-  <version>9.3.0-SNAPSHOT</version>
+  <version>9.3.0</version>
   <packaging>iar-integration-test</packaging>
   <dependencies>
     <dependency>
