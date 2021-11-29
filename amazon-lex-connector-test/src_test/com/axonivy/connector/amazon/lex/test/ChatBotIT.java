@@ -33,11 +33,11 @@ public class ChatBotIT {
     sendInput("yes, please");
 
     $(By.id("form:confirmation"))
-        .shouldBe(Condition.matchesText("BookHotel"))
-        .shouldBe(Condition.matchesText("CheckInDate="))
-        .shouldBe(Condition.matchesText("Location=New York"))
-        .shouldBe(Condition.matchesText("Nights=5"))
-        .shouldBe(Condition.matchesText("RoomType=queen"));
+        .shouldBe(Condition.matchText("BookHotel"))
+        .shouldBe(Condition.matchText("CheckInDate="))
+        .shouldBe(Condition.matchText("Location=New York"))
+        .shouldBe(Condition.matchText("Nights=5"))
+        .shouldBe(Condition.matchText("RoomType=queen"));
 
   }
 
