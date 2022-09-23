@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.amazon.lex</groupId>
   <artifactId>amazon-lex-connector-test</artifactId>
-  <version>9.3.2-SNAPSHOT</version>
+  <version>9.4.0</version>
   <packaging>iar-integration-test</packaging>
   <dependencies>
     <dependency>
       <groupId>com.axonivy.ivy.webtest</groupId>
       <artifactId>web-tester</artifactId>
-      <version>9.3.0</version>
+      <version>9.4.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -21,20 +22,6 @@
   </dependencies>
   <build>
     <testSourceDirectory>src_test</testSourceDirectory>
-    <plugins>
-      <plugin>
-        <groupId>com.axonivy.ivy.ci</groupId>
-        <artifactId>project-build-plugin</artifactId>
-        <version>9.3.1</version>
-        <extensions>true</extensions>
-        <configuration>
-          <additionalVmOptions>
-            -Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.AccessKey=${aws.access.key}
-            -Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.SecretKey=${aws.secret.key}
-          </additionalVmOptions>
-        </configuration>
-      </plugin>
-    </plugins>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -46,5 +33,17 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>com.axonivy.ivy.ci</groupId>
+        <artifactId>project-build-plugin</artifactId>
+        <version>9.4.1</version>
+        <extensions>true</extensions>
+        <configuration>
+          <additionalVmOptions>-Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.AccessKey=${aws.access.key}
+            -Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.SecretKey=${aws.secret.key}</additionalVmOptions>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
