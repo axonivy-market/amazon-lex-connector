@@ -1,8 +1,10 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17B2F6BE1C69F667",
-  "data" : "com.axonivy.connector.amazon.lex.demo.ChatBot.ChatBotData",
   "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "com.axonivy.connector.amazon.lex.demo.ChatBot.ChatBotData"
+  },
   "elements" : [ {
       "id" : "f0",
       "type" : "HtmlDialogStart",
