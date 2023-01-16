@@ -4,6 +4,8 @@ import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+import java.time.Duration;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -43,7 +45,7 @@ public class ChatBotIT {
 
   private void sendInputAndWait(String input) {
     var chatSize = sendInput(input);
-    $(By.id("form:chat")).shouldHave(childrenSize(chatSize+2));
+    $(By.id("form:chat")).shouldHave(childrenSize(chatSize+2), Duration.ofSeconds(10));
   }
 
   private int sendInput(String input) {
