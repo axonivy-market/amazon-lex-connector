@@ -1,12 +1,15 @@
-Axon Ivy’s [Amazon Lex API](https://aws.amazon.com/lex/) helps you to accelerate process automation
-initiatives by introducing Natural Language Processing (NLP) and Machine
-Learning (ML) to your process work. Amazon Lex builds sophisticated, natural language, conversional bots (chatbots). This connector:
+Axon Ivy's [Amazon Lex API](https://aws.amazon.com/lex/)  connector integrates Amazon Lex, a service for building conversational interfaces, into your process automation workflows. This integration allows you to leverage Natural Language Processing (NLP) and Machine Learning (ML) capabilities provided by Amazon Lex within your Axon Ivy processes.
 
-- Is based on a freemium pricing model by AWS.
-- Provides APIs to send user message to bots and vice versa.
-- Identifies user intent and additional information collected by the bot.
-- Supports you with an easy-to-copy demo implementation to reduce your
-  integration effort.
+Key features of the Amazon Lex API connector:
+
+- **Intent Recognition**: Intent recognition is a natural language processing (NLP) technique used to identify the goal or purpose behind a user's input.
+- **Bi-directional Communication**: The API provides methods to send messages from your process to the bot and receive responses back, facilitating seamless communication between your process and the conversational interface.
+- **Demo Implementation**: Axon Ivy offers a ready-to-use demo implementation that you can easily adapt to your specific use case. This reduces your integration effort and helps you quickly get started with incorporating Amazon Lex into your processes.
+- **Freemium Pricing**: The connector is based on Amazon Web Services' (AWS) freemium pricing model, which means you can start using the service for free up to a certain usage threshold. This allows you to experiment and evaluate the benefits of conversational interfaces in your processes without upfront costs.
+
+It's important to note that while both Amazon Lex and ChatGPT use NLP and ML techniques, they serve different purposes. ChatGPT is a large language model trained by OpenAI to engage in open-ended conversations and assist with various tasks. On the other hand, Amazon Lex is a service specifically designed for building conversational interfaces (chatbots) with predefined intents and actions.
+
+**With Axon Ivy's Amazon Lex API connector, you can enhance your process automation initiatives by introducing conversational capabilities, making your processes more user-friendly and accessible through natural language interactions.**
 
 ## Demo
 
