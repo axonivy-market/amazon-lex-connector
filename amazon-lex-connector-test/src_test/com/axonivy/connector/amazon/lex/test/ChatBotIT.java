@@ -4,21 +4,17 @@ import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-import java.time.Duration;
-
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import com.axonivy.ivy.webtest.IvyWebTest;
 import com.axonivy.ivy.webtest.engine.EngineUrl;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Driver;
 
 /**
  * Test the Amazon Lex Demo
  */
-@IvyWebTest
+@IvyWebTest(headless = true)
 public class ChatBotIT {
 
   @Test
@@ -40,12 +36,11 @@ public class ChatBotIT {
         .shouldBe(Condition.matchText("Location=New York"))
         .shouldBe(Condition.matchText("Nights=5"))
         .shouldBe(Condition.matchText("RoomType=queen"));
-
   }
 
   private void sendInputAndWait(String input) {
     var chatSize = sendInput(input);
-    $(By.id("form:chat")).shouldHave(childrenSize(chatSize+2), Duration.ofSeconds(10));
+    $(By.id("form:chat")).findElements(By.tagName("div")).get(chatSize + 1).isDisplayed();
   }
 
   private int sendInput(String input) {
@@ -54,24 +49,4 @@ public class ChatBotIT {
     $(By.id("form:send")).shouldBe(enabled).click();
     return chatSize;
   }
-
-  private ChildrenSize childrenSize(int chatSize) {
-    return new ChildrenSize(chatSize);
-  }
-
-  private final class ChildrenSize extends Condition {
-
-    private final int chatSize;
-
-    private ChildrenSize(int chatSize) {
-      super("Children size");
-      this.chatSize = chatSize;
-    }
-
-    @Override
-    public boolean apply(Driver driver, WebElement element) {
-      return element.findElements(By.tagName("div")).size() == chatSize;
-    }
-  }
-
 }

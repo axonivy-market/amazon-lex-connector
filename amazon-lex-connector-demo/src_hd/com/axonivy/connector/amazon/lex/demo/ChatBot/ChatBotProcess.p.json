@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/11.3.0/process.json",
   "id" : "17B2F6BE1C69F667",
   "kind" : "HTML_DIALOG",
   "config" : {
@@ -10,7 +10,7 @@
       "type" : "HtmlDialogStart",
       "name" : "start()",
       "config" : {
-        "callSignature" : "start",
+        "signature" : "start",
         "input" : {
           "map" : {
             "out.sessionId" : "java.util.UUID.randomUUID().toString()"
@@ -29,7 +29,9 @@
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 12, "y" : 35 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     }, {
       "id" : "f1",
       "type" : "HtmlDialogEnd",
@@ -47,7 +49,9 @@
         "at" : { "x" : 96, "y" : 160 },
         "labelOffset" : { "x" : 9, "y" : 35 }
       },
-      "connect" : { "id" : "f5", "to" : "f4" }
+      "connect" : [
+        { "id" : "f5", "to" : "f4" }
+      ]
     }, {
       "id" : "f4",
       "type" : "Script",
@@ -65,55 +69,66 @@
       },
       "visual" : {
         "at" : { "x" : 208, "y" : 160 },
-        "size" : { "width" : 144, "height" : 60 }
+        "size" : { "width" : 144 }
       },
-      "connect" : { "id" : "f7", "to" : "f6" }
+      "connect" : [
+        { "id" : "f7", "to" : "f6" }
+      ]
     }, {
       "id" : "f6",
       "type" : "RestClientCall",
       "name" : "Send input to Amazon Lex",
       "config" : {
-        "path" : "/bots/{botId}/botAliases/{botAliasId}/botLocales/{localeId}/sessions/{sessionId}/text",
-        "bodyObjectMapping" : {
-          "param.text" : "in.input"
-        },
-        "clientId" : "13f7783c-cd64-4625-a663-82b504bd4195",
-        "clientErrorCode" : "ivy:error:rest:client",
         "method" : "POST",
-        "statusErrorCode" : "ivy:error:rest:client",
-        "bodyObjectType" : "com.amazonaws.lex.runtime.v2.SessionIdTextBody",
-        "templateParams" : {
-          "botAliasId" : "ivy.var.Amazon_Lex_BotAliasId",
-          "botId" : "ivy.var.Amazon_Lex_BotId",
-          "sessionId" : "in.sessionId",
-          "localeId" : "\"en_US\""
+        "target" : {
+          "clientId" : "13f7783c-cd64-4625-a663-82b504bd4195",
+          "path" : "/bots/{botId}/botAliases/{botAliasId}/botLocales/{localeId}/sessions/{sessionId}/text",
+          "templateParams" : {
+            "botId" : "ivy.var.get(\"Amazon.Lex.BotId\")",
+            "botAliasId" : "ivy.var.get(\"Amazon.Lex.BotAliasId\")",
+            "localeId" : "\"en_US\"",
+            "sessionId" : "in.sessionId"
+          }
         },
-        "resultType" : "com.amazonaws.lex.runtime.v2.RecognizeTextResponse",
-        "bodyInputType" : "ENTITY",
-        "responseCode" : [
-          "import com.amazonaws.lex.runtime.v2.Intent;",
-          "import com.axonivy.connector.amazon.lex.connector.BotResponse;",
-          "import com.axonivy.connector.amazon.lex.demo.Message;",
-          "",
-          "List<String> messages = BotResponse.messages(result);",
-          "if (!messages.isEmpty()) {",
-          "  Message message;",
-          "  message.what = messages.get(0);",
-          "  message.icon = \"si si-messages-bubble\";",
-          "  out.messages.add(message);",
-          "} else if (BotResponse.getIntent(result) is initialized) {",
-          "  Intent intent = BotResponse.getIntent(result);",
-          "  out.confirmation = BotResponse.stringify(intent);",
-          "  out.finished = true;",
-          "}",
-          "in.input = \"\";"
-        ]
+        "body" : {
+          "entity" : {
+            "type" : "com.amazonaws.lex.runtime.v2.SessionIdTextBody",
+            "map" : {
+              "param.text" : "in.input"
+            }
+          }
+        },
+        "response" : {
+          "entity" : {
+            "type" : "com.amazonaws.lex.runtime.v2.RecognizeTextResponse",
+            "code" : [
+              "import com.amazonaws.lex.runtime.v2.Intent;",
+              "import com.axonivy.connector.amazon.lex.connector.BotResponse;",
+              "import com.axonivy.connector.amazon.lex.demo.Message;",
+              "",
+              "List<String> messages = BotResponse.messages(result);",
+              "if (!messages.isEmpty()) {",
+              "  Message message;",
+              "  message.what = messages.get(0);",
+              "  message.icon = \"si si-messages-bubble\";",
+              "  out.messages.add(message);",
+              "} else if (BotResponse.getIntent(result) is initialized) {",
+              "  Intent intent = BotResponse.getIntent(result);",
+              "  out.confirmation = BotResponse.stringify(intent);",
+              "  out.finished = true;",
+              "}",
+              "in.input = \"\";"
+            ]
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 392, "y" : 160 },
-        "size" : { "width" : 160, "height" : 60 }
+        "size" : { "width" : 160 }
       },
-      "connect" : { "id" : "f9", "to" : "f8" }
+      "connect" : [
+        { "id" : "f9", "to" : "f8" }
+      ]
     }, {
       "id" : "f8",
       "type" : "HtmlDialogEnd",
