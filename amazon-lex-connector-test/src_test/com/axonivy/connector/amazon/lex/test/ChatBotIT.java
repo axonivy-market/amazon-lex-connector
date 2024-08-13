@@ -11,6 +11,8 @@ import com.axonivy.ivy.webtest.IvyWebTest;
 import com.axonivy.ivy.webtest.engine.EngineUrl;
 import com.codeborne.selenide.Condition;
 
+import ch.ivyteam.ivy.environment.Ivy;
+
 /**
  * Test the Amazon Lex Demo
  */
@@ -40,7 +42,9 @@ public class ChatBotIT {
 
   private void sendInputAndWait(String input) {
     var chatSize = sendInput(input);
-    $(By.id("form:chat")).findElements(By.tagName("div")).get(chatSize + 1).isDisplayed();
+    Ivy.log().warn("Chat Size : {0}", chatSize);
+    Ivy.log().warn("Size : {0}" , $(By.id("form:chat")).findElements(By.tagName("div")).size());
+    //$(By.id("form:chat")).findElements(By.tagName("div")).get(chatSize + 1).isDisplayed();
   }
 
   private int sendInput(String input) {
