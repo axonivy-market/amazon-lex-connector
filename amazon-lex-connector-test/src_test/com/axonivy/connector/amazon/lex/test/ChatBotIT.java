@@ -1,8 +1,11 @@
 package com.axonivy.connector.amazon.lex.test;
 
 import static com.codeborne.selenide.Condition.enabled;
+import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+
+import java.time.Duration;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -10,8 +13,8 @@ import org.openqa.selenium.By;
 import com.axonivy.ivy.webtest.IvyWebTest;
 import com.axonivy.ivy.webtest.engine.EngineUrl;
 import com.codeborne.selenide.Condition;
-
-import ch.ivyteam.ivy.environment.Ivy;
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 
 /**
  * Test the Amazon Lex Demo
@@ -42,7 +45,9 @@ public class ChatBotIT {
 
   private void sendInputAndWait(String input) {
     var chatSize = sendInput(input);
-    //$(By.id("form:chat")).findElements(By.tagName("div")).get(chatSize + 1).isDisplayed();
+    SelenideElement chatForm = $(By.id("form:chat"));
+    ElementsCollection childElements = chatForm.$$(By.tagName("div"));
+    childElements.get(chatSize + 1).shouldHave(appear, Duration.ofSeconds(10));
   }
 
   private int sendInput(String input) {
