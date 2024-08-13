@@ -61,8 +61,8 @@
         <version>${project.build.plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
-          <additionalVmArgs>-Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.AccessKey=${aws.access.key}
-            -Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.SecretKey=${aws.secret.key}</additionalVmArgs>
+          <additionalVmOptions>-Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.AccessKey=${aws.access.key}
+            -Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.SecretKey=${aws.secret.key}</additionalVmOptions>
         </configuration>
       </plugin>
     </plugins>
