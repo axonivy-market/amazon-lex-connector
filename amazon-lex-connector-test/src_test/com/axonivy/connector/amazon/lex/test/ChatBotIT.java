@@ -42,8 +42,6 @@ public class ChatBotIT {
 
   private void sendInputAndWait(String input) {
     var chatSize = sendInput(input);
-    Ivy.log().warn("Chat Size : {0}", chatSize);
-    Ivy.log().warn("Size : {0}" , $(By.id("form:chat")).findElements(By.tagName("div")).size());
     //$(By.id("form:chat")).findElements(By.tagName("div")).get(chatSize + 1).isDisplayed();
   }
 
