@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.amazon.lex</groupId>
   <artifactId>amazon-lex-connector-test</artifactId>
-  <version>11.3.2-SNAPSHOT</version>
+  <version>11.4.0-SNAPSHOT</version>
   <packaging>iar-integration-test</packaging>
   <properties>
-    <project.build.plugin.version>11.3.0</project.build.plugin.version>
-    <tester.version>11.3.0</tester.version>
+    <project.build.plugin.version>11.4.0-SNAPSHOT</project.build.plugin.version>
+    <tester.version>11.4.0-SNAPSHOT</tester.version>
   </properties>
   <pluginRepositories>
     <pluginRepository>
@@ -61,8 +61,10 @@
         <version>${project.build.plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
-          <additionalVmOptions>-Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.AccessKey=${aws.access.key}
-            -Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.SecretKey=${aws.secret.key}</additionalVmOptions>
+          <additionalVmArgs>
+            <additionalVmArg>-Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.AccessKey=${aws.access.key}</additionalVmArg>
+            <additionalVmArg>-Divy.Applications.amazonlexconnectortest.Variables.Amazon.Lex.SecretKey=${aws.secret.key}</additionalVmArg>
+          </additionalVmArgs>
         </configuration>
       </plugin>
     </plugins>
