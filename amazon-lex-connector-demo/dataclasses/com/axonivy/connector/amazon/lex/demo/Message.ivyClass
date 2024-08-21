@@ -1,6 +1,0 @@
-Message #class
-com.axonivy.connector.amazon.lex.demo #namespace
-what String #field
-what PERSISTENT #fieldModifier
-icon String #field
-icon PERSISTENT #fieldModifier

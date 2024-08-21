@@ -1,0 +1,15 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/11.4.0/data-class.json",
+  "simpleName" : "Message",
+  "namespace" : "com.axonivy.connector.amazon.lex.demo",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "what",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "icon",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}

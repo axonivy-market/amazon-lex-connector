@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/app/11.4.1/variables.json
 # == Variables ==
 # 
 # You can define here your project Variables.
@@ -5,19 +6,19 @@
 # please add a 'variables.yaml' in the sub directory '_<environment>'.
 #
 Variables:
-  
-  Amazon.Lex:
-
-    # Secret key to access amazon lex
-    # [password] 
-    SecretKey: ""
-    
-    # Access key to access amazon lex
-    # [password]
-    AccessKey: ""
-    
-    # Identifier of the amazon lex bot alias that should be called
-    BotAliasId: ""
-    
-    # Identifier of the amazon lex bot that should be called
-    BotId: ""
+  Amazon:
+    Lex:
+      
+      # Secret key to access amazon lex
+      # [password] 
+      SecretKey: ""
+      
+      # Access key to access amazon lex
+      # [password]
+      AccessKey: ""
+      
+      # Identifier of the amazon lex bot alias that should be called
+      BotAliasId: ""
+      
+      # Identifier of the amazon lex bot that should be called
+      BotId: ""
