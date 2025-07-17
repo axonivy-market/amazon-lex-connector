@@ -12,14 +12,10 @@
   <artifactId>amazon-lex-connector</artifactId>
   <version>13.1.1-SNAPSHOT</version>
   <packaging>iar</packaging>
-  <properties>
-    <project.build.plugin.version>12.0.0</project.build.plugin.version>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>com.axonivy.connector.aws</groupId>
       <artifactId>amazon-aws4-authenticator</artifactId>
-      <version>0.0.7</version>
     </dependency>
     <dependency>
       <groupId>com.axonivy.ivy.api</groupId>
