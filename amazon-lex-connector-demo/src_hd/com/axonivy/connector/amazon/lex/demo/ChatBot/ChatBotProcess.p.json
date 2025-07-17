@@ -94,8 +94,6 @@
           "entity" : {
             "type" : "com.amazonaws.lex.runtime.v2.SessionIdTextBody",
             "map" : {
-              "param.sessionState.dialogAction.type" : "com.amazonaws.lex.runtime.v2.DialogActionType.CONFIRMINTENT",
-              "param.sessionState.intent.name" : "\"\"",
               "param.text" : "in.input"
             }
           }
