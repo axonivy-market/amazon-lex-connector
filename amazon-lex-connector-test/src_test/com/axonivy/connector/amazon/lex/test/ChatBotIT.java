@@ -19,7 +19,7 @@ import com.codeborne.selenide.SelenideElement;
 /**
  * Test the Amazon Lex Demo
  */
-@IvyWebTest(headless = true)
+@IvyWebTest
 public class ChatBotIT {
 
   @Test
