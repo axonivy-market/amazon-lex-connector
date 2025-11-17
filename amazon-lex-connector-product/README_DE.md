@@ -1,15 +1,85 @@
-Die [Amazon Lex API](https://aws.amazon.com/lex/) von Axon Ivy verbindet Amazon Lex mit deinen Prozessautomatisierungs-Workflows. Durch diese Integration kannst du die Möglichkeiten der natürlichen Sprachverarbeitung (NLP) und des maschinellen Lernens (ML) von Amazon Lex direkt in deinen Axon Ivy-Prozessen nutzen.
+#Axon Efeus [#Amazon Lex API](https://aws.amazon.com/lex/) Anschluss integriert
+#Amazon Lex, eine Bedienung für bauen gesprächige Schnittstellen, hinein eure
+Arbeitsgang Automatisierung workflows. Diese Integration erlaubt du zu
+#aushebeln Naturale Sprache Verarbeitung (NLP) und Maschine #Lernen (#ML)
+Fähigkeiten versehen bei #Amazon Lex innerhalb eure #Axon #Ivy verarbeitet.
 
-Die wichtigsten Funktionen der Amazon Lex API:
+Wesentliche Charakterzüge von #der #Amazon Lex API Anschluss:
 
-- **Erkennung von Absichten** : (Intent Recognition) Die Erkennung von Absichten ist eine NLP-Technik, mit der das Ziel oder der Zweck hinter der Eingabe eines Benutzers identifiziert wird.
-- **Bi-direktionale** Kommunikation: Die API bietet Methoden, um Nachrichten von deinem Prozess an den Bot zu senden  und Antworten zurückzuerhalten. So wird eine bi-direktionale Kommunikation  zwischen deinem Prozess und der Konversationsschnittstelle ermöglicht.
-- **Demo-Implementierung**: Axon Ivy bietet eine einsatzbereite Demo-Implementierung, die du einfach an deine spezifischen Anforderungen anpassen kannst. Das reduziert deinen Integrationsaufwand und hilft dir, Amazon Lex schnell in deine Prozesse einzubinden.
-- **Freemium-Preismodell**: Die Schnittstelle basiert auf dem Freemium-Preismodell von Amazon Web Services (AWS). Das bedeutet, du kannst den Dienst bis zu einem bestimmten Nutzungsumfang kostenlos verwenden. So kannst du die Vorteile von Konversationsschnittstellen in deinen Prozessen kostenlos testen und bewerten.
-  
-**Was ist der Unterschied zu ChatGPT?**
+- **Absicht Bestätigung**: Absicht Bestätigung ist eine naturale Sprache
+  Verarbeitung (NLP) Methode benutzte zu identifizieren das Tor oder Zweck
+  hinter einen NutzersInput.
+- **Bi-#Direktional Kommunikation**: Das API versieht Methoden zu senden
+  Meldungen von eurem Arbeitsgang zu dem bot und empfangen Antworten rückwärtig,
+  unterstützend nahtlose Kommunikation zwischen eurem Arbeitsgang und die
+  gesprächige Schnittstelle.
+- **Demo Ausführung**: #Axon #Ivy bietet an ein bereites-zu-Nutzung Demo
+  Ausführung dass du kannst sicher zu eurer spezifischen Nutzung Fall
+  adaptieren. Dies setzt herunter eure Integration Anstrengung und hilft du
+  schnell #loslegen mit verleiben #Amazon Lex hinein eure Arbeitsgänge.
+- **Freemium #Preisfindung**: Der Anschluss ist gegründet auf #Amazon Web
+  Bedienungens (AWS) freemium #Preisfindung Model, welcher bedeutet du kannst
+  starten benutzen #kostenlos die Bedienung bis einem gewissen Gebrauch
+  Schwelle. Dies erlaubt du zu experimentieren und auswerten die Nutzen von
+  gesprächig Schnittstellen in euren Arbeitsgängen #ohne upfront Preise.
 
-Amazon Lex und ChatGPT verwenden zwar beide NLP- und ML-Techniken, verfolgen aber unterschiedliche Ziele. ChatGPT ist ein umfangreiches Sprachmodell, das von OpenAI trainiert wurde, um offene Gespräche zu führen.
-Amazon Lex hingegen ist ein Dienst, der speziell für die Erstellung von Chatbots mit vordefinierten  Absichten und Aktionen entwickelt wurde.
-**Mit der Amazon Lex API von Axon Ivy hast du die Möglichkeit, deine Prozessautomatisierung
-zu optimieren, indem du Chatbot-Funktionalitäten hinzufügst. Auf diese Weise werden deine Prozesse dank der Interaktion in natürlicher Sprache intuitiver und benutzerfreundlicher**.
+Es ist wichtig zu beachten jene Weile #beide #Amazon Lex und ChatGPT Nutzung NLP
+und #ML Methoden, sie servieren verschiedene Zwecke. ChatGPT Ist eine große
+Sprache Model trainiert mal OpenAI zu verloben herein offen-endete
+Unterhaltungen und assistieren mit verschiedenen Tasks. Andererseits, #Amazon
+Lex ist speziell eine Bedienung gestaltet für bauen gesprächige Schnittstellen
+(chatbots) mit #vordefiniert Absichten und Aktionen.
+
+**Mit #Axon Efeus #Amazon Lex API Anschluss, du kannst eure Arbeitsgang
+Automatisierung Initiativen erweitern mal hereinbringen gesprächige Fähigkeiten,
+machend eure Arbeitsgänge #mehr Nutzer-freundlich und erreichbar durch natural
+Sprache Interaktionen.**
+
+## Demo
+
+### Schwatz Bot
+
+Der Schwatz bot Demo ist gegründet weiter die amazon BookTrip Demo bot.
+1. Tipp ein #vorbestellen Text du magst hinein das Text Feld gleichnamig: _Ich
+   mögen ein Hotel vorbestellen_ oder _ich mögen ein Auto vorbestellen_.
+2. Beantworte die Fragen von die bots
+3. #Amazon Lex wollen herausfinden eure Absicht und versieht Zusatzinformation
+   in der Bestätigung.
+
+![Demo-verarbeite](images/lex-demo.png)
+
+## Einrichtung
+
+1. Zuerst brauchst du zu schaffen #ein #Amazon Lex bot. Geh zu
+   https://aws.amazon.com
+
+2. Anmeldung oder schaffen ein neues Konto.
+
+3. Klick auf Bedienungen / #Amazon Lex.
+
+4. Klick auf #loslegen Steuert und folgen die Weisung zu schaffen ein neues bot.
+   Sicher jener du schaffst ein V2 bot Nutzung Vorlage BookTrip
+
+![Demo-verarbeite](images/lex-bot.png)
+
+5. Konfigurier die folgenden Variablen in eurem Projekt:
+
+```
+Variables:
+
+  Amazon.Lex:
+
+    # Secret key to access amazon lex
+    # [password] 
+    SecretKey: <YOUR_SECRET_KEY>
+
+    # Access key to access amazon lex
+    # [password]
+    AccessKey: <YOUR_ACCESS_KEY>
+
+    # Identifier of the amazon lex bot alias that should be called
+    BotAliasId: <YOUR_BOT_ALIAS_ID>
+
+    # Identifier of the amazon lex bot that should be called
+    BotId: <YOUR_BOT_ID>
+```
