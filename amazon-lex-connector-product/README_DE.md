@@ -1,68 +1,69 @@
-#Axon Efeus [#Amazon Lex API](https://aws.amazon.com/lex/) Anschluss integriert
-#Amazon Lex, eine Bedienung für bauen gesprächige Schnittstellen, hinein eure
-Arbeitsgang Automatisierung workflows. Diese Integration erlaubt du zu
-#aushebeln Naturale Sprache Verarbeitung (NLP) und Maschine #Lernen (#ML)
-Fähigkeiten versehen bei #Amazon Lex innerhalb eure #Axon #Ivy verarbeitet.
+Der [Amazon Lex API]-Konnektor von Axon Ivy integriert Amazon Lex, einen Dienst
+zum Erstellen von Konversationsschnittstellen, in Ihre
+Prozessautomatisierungs-Workflows. Durch diese Integration können Sie die von
+Amazon Lex bereitgestellten Funktionen für natürliche Sprachverarbeitung (NLP)
+und maschinelles Lernen (ML) in Ihren Axon Ivy-Prozessen nutzen.
 
-Wesentliche Charakterzüge von #der #Amazon Lex API Anschluss:
+Wichtigste Funktionen des Amazon Lex API-Konnektors:
 
-- **Absicht Bestätigung**: Absicht Bestätigung ist eine naturale Sprache
-  Verarbeitung (NLP) Methode benutzte zu identifizieren das Tor oder Zweck
-  hinter einen NutzersInput.
-- **Bi-#Direktional Kommunikation**: Das API versieht Methoden zu senden
-  Meldungen von eurem Arbeitsgang zu dem bot und empfangen Antworten rückwärtig,
-  unterstützend nahtlose Kommunikation zwischen eurem Arbeitsgang und die
-  gesprächige Schnittstelle.
-- **Demo Ausführung**: #Axon #Ivy bietet an ein bereites-zu-Nutzung Demo
-  Ausführung dass du kannst sicher zu eurer spezifischen Nutzung Fall
-  adaptieren. Dies setzt herunter eure Integration Anstrengung und hilft du
-  schnell #loslegen mit verleiben #Amazon Lex hinein eure Arbeitsgänge.
-- **Freemium #Preisfindung**: Der Anschluss ist gegründet auf #Amazon Web
-  Bedienungens (AWS) freemium #Preisfindung Model, welcher bedeutet du kannst
-  starten benutzen #kostenlos die Bedienung bis einem gewissen Gebrauch
-  Schwelle. Dies erlaubt du zu experimentieren und auswerten die Nutzen von
-  gesprächig Schnittstellen in euren Arbeitsgängen #ohne upfront Preise.
+- **** en zur Absichtserkennung: Die Absichtserkennung ist eine Technik der
+  natürlichen Sprachverarbeitung (Natural Language Processing, NLP), mit der das
+  Ziel oder der Zweck hinter der Eingabe eines Benutzers identifiziert wird.
+- **** für bidirektionale Kommunikation: Die API bietet Methoden zum Senden von
+  Nachrichten von Ihrem Prozess an den Bot und zum Empfangen von Antworten,
+  wodurch eine nahtlose Kommunikation zwischen Ihrem Prozess und der
+  Konversationsschnittstelle ermöglicht wird.
+- **Demo-Implementierung**: Axon Ivy bietet eine gebrauchsfertige
+  Demo-Implementierung, die Sie ganz einfach an Ihren spezifischen
+  Anwendungsfall anpassen können. Dies reduziert Ihren Integrationsaufwand und
+  hilft Ihnen, Amazon Lex schnell in Ihre Prozesse zu integrieren.
+- **Freemium-Preismodell**: Der Konnektor basiert auf dem Freemium-Preismodell
+  von Amazon Web Services (AWS), was bedeutet, dass Sie den Dienst bis zu einer
+  bestimmten Nutzungsgrenze kostenlos nutzen können. So können Sie die Vorteile
+  von Konversationsschnittstellen in Ihren Prozessen ohne Vorabkosten testen und
+  bewerten.
 
-Es ist wichtig zu beachten jene Weile #beide #Amazon Lex und ChatGPT Nutzung NLP
-und #ML Methoden, sie servieren verschiedene Zwecke. ChatGPT Ist eine große
-Sprache Model trainiert mal OpenAI zu verloben herein offen-endete
-Unterhaltungen und assistieren mit verschiedenen Tasks. Andererseits, #Amazon
-Lex ist speziell eine Bedienung gestaltet für bauen gesprächige Schnittstellen
-(chatbots) mit #vordefiniert Absichten und Aktionen.
+Es ist wichtig zu beachten, dass sowohl Amazon Lex als auch ChatGPT zwar NLP-
+und ML-Techniken verwenden, aber unterschiedlichen Zwecken dienen. ChatGPT ist
+ein großes Sprachmodell, das von OpenAI trainiert wurde, um offene Gespräche zu
+führen und bei verschiedenen Aufgaben zu helfen. Amazon Lex hingegen ist ein
+Dienst, der speziell für die Erstellung von Konversationsschnittstellen
+(Chatbots) mit vordefinierten Absichten und Aktionen entwickelt wurde.
 
-**Mit #Axon Efeus #Amazon Lex API Anschluss, du kannst eure Arbeitsgang
-Automatisierung Initiativen erweitern mal hereinbringen gesprächige Fähigkeiten,
-machend eure Arbeitsgänge #mehr Nutzer-freundlich und erreichbar durch natural
-Sprache Interaktionen.**
+**Mit dem Amazon Lex API-Konnektor von Axon Ivy können Sie Ihre
+Prozessautomatisierungsinitiativen durch die Einführung von
+Konversationsfunktionen verbessern und Ihre Prozesse durch natürliche
+Sprachinteraktionen benutzerfreundlicher und zugänglicher machen.**
 
 ## Demo
 
-### Schwatz Bot
+### Chatbot
 
-Der Schwatz bot Demo ist gegründet weiter die amazon BookTrip Demo bot.
-1. Tipp ein #vorbestellen Text du magst hinein das Text Feld gleichnamig: _Ich
-   mögen ein Hotel vorbestellen_ oder _ich mögen ein Auto vorbestellen_.
-2. Beantworte die Fragen von die bots
-3. #Amazon Lex wollen herausfinden eure Absicht und versieht Zusatzinformation
-   in der Bestätigung.
+Die Chatbot-Demo basiert auf dem Amazon BookTrip-Demo-Bot.
+1. Typ einen beliebigen Buchungstext in das Textfeld ein, z. B.: _Ich möchte ein
+   Hotel buchen_ oder _Ich möchte ein Auto buchen_.
+2. Beantworten Sie die Fragen der Bots.
+3. Amazon Lex erkennt Ihre Absicht und liefert zusätzliche Informationen in der
+   Bestätigung.
 
-![Demo-verarbeite](images/lex-demo.png)
+![demo-process](images/lex-demo.png)
 
 ## Einrichtung
 
-1. Zuerst brauchst du zu schaffen #ein #Amazon Lex bot. Geh zu
-   https://aws.amazon.com
+1. Zunächst müssen Sie einen Amazon Lex-Bot erstellen. Gehen Sie dazu auf
+   https://aws.amazon.com.
 
-2. Anmeldung oder schaffen ein neues Konto.
+2. Melden Sie sich an oder erstellen Sie ein neues Konto.
 
-3. Klick auf Bedienungen / #Amazon Lex.
+3. Klicken Sie auf „Services“ / „Amazon Lex“.
 
-4. Klick auf #loslegen Steuert und folgen die Weisung zu schaffen ein neues bot.
-   Sicher jener du schaffst ein V2 bot Nutzung Vorlage BookTrip
+4. Klicken Sie auf „Getting Started Guide“ und folgen Sie den Anweisungen, um
+   einen neuen Bot zu erstellen. Stellen Sie sicher, dass Sie einen V2-Bot
+   erstellen. Verwenden Sie die Vorlage „BookTrip“.
 
-![Demo-verarbeite](images/lex-bot.png)
+![demo-process](images/lex-bot.png)
 
-5. Konfigurier die folgenden Variablen in eurem Projekt:
+5. Konfigurieren Sie die folgenden Variablen in Ihrem Projekt:
 
 ```
 Variables:
