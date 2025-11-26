@@ -48,7 +48,7 @@ Die Chatbot-Demo basiert auf dem Amazon BookTrip-Demo-Bot.
 
 ![demo-process](images/lex-demo.png)
 
-## Einrichtung
+## Setup
 
 1. Zunächst müssen Sie einen Amazon Lex-Bot erstellen. Gehen Sie dazu auf
    https://aws.amazon.com.
