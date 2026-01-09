@@ -7,14 +7,14 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>${project.name}</module>
-    <module>${project.name}-demo</module>
-    <module>${project.name}-test</module>
-    <module>${project.name}-product</module>
+    <module>amazon-lex-connector</module>
+    <module>amazon-lex-connector-demo</module>
+    <module>amazon-lex-connector-test</module>
+    <module>amazon-lex-connector-product</module>
   </modules>
 
   <scm>
-    <developerConnection>scm:git:https://github.com/axonivy-market/${project.name}.git</developerConnection>
+    <developerConnection>scm:git:https://github.com/axonivy-market/amazon-lex-connector.git</developerConnection>
     <tag>v10.0.3</tag>
   </scm>
 
