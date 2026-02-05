@@ -19,3 +19,4 @@ jobs:
     with:
       javaVersion: 21
       mvnVersion: 3.9.8
+      cspellConfig: cspell.json
