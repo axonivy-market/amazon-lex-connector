@@ -1,27 +1,18 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "ChatBotData",
   "namespace" : "com.axonivy.connector.amazon.lex.demo.ChatBot",
-  "isBusinessCaseData" : false,
   "fields" : [ {
     "name" : "messages",
-    "type" : "List<com.axonivy.connector.amazon.lex.demo.Message>",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "List<com.axonivy.connector.amazon.lex.demo.Message>"
   }, {
-    "name" : "input",
-    "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "name" : "input"
   }, {
-    "name" : "sessionId",
-    "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "name" : "sessionId"
   }, {
     "name" : "finished",
-    "type" : "Boolean",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "Boolean"
   }, {
-    "name" : "confirmation",
-    "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "name" : "confirmation"
   } ]
 }
