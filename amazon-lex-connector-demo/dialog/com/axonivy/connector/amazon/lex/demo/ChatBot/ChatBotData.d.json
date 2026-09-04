@@ -1,0 +1,23 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
+  "simpleName" : "ChatBotData",
+  "namespace" : "com.axonivy.connector.amazon.lex.demo.ChatBot",
+  "fields" : [ {
+    "name" : "messages",
+    "type" : "List<com.axonivy.connector.amazon.lex.demo.Message>",
+    "modifiers" : [ ]
+  }, {
+    "name" : "input",
+    "modifiers" : [ ]
+  }, {
+    "name" : "sessionId",
+    "modifiers" : [ ]
+  }, {
+    "name" : "finished",
+    "type" : "Boolean",
+    "modifiers" : [ ]
+  }, {
+    "name" : "confirmation",
+    "modifiers" : [ ]
+  } ]
+}

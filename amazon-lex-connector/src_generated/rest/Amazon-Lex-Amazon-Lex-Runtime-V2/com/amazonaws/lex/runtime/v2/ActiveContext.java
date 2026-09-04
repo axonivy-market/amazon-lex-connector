@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * &lt;p&gt;Contains information about the contexts that a user is using in a session. You can configure Amazon Lex V2 to set a context when an intent is fulfilled, or you can set a context using the , , or operations.&lt;/p&gt; &lt;p&gt;Use a context to indicate to Amazon Lex V2 intents that should be used as follow-up intents. For example, if the active context is &lt;code&gt;order-fulfilled&lt;/code&gt;, only intents that have &lt;code&gt;order-fulfilled&lt;/code&gt; configured as a trigger are considered for follow up.&lt;/p&gt;
  */
-@javax.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
 public class ActiveContext {
   @JsonProperty("name")
   private String name = null;

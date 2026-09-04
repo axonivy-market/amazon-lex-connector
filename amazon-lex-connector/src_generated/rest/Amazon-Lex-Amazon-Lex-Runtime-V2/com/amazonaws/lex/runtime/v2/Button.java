@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * A button that appears on a response card show to the user.
  */
-@javax.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
 public class Button {
   @JsonProperty("text")
   private String text = null;

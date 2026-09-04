@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * &lt;p&gt;A card that is shown to the user by a messaging platform. You define the contents of the card, the card is displayed by the platform. &lt;/p&gt; &lt;p&gt;When you use a response card, the response from the user is constrained to the text associated with a button on the card.&lt;/p&gt;
  */
-@javax.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
 public class ImageResponseCard {
   @JsonProperty("title")
   private String title = null;

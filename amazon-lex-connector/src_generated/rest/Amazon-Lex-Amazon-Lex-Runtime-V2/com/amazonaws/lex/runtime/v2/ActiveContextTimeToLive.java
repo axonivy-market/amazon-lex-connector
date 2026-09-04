@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * The time that a context is active. You can specify the time to live in seconds or in conversation turns.
  */
-@javax.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
 public class ActiveContextTimeToLive {
   @JsonProperty("timeToLiveInSeconds")
   private Integer timeToLiveInSeconds = null;

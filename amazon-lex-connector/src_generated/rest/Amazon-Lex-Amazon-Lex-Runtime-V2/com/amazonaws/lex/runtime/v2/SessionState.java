@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * The state of the user&#x27;s session with Amazon Lex V2.
  */
-@javax.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
 public class SessionState {
   @JsonProperty("dialogAction")
   private DialogAction dialogAction = null;

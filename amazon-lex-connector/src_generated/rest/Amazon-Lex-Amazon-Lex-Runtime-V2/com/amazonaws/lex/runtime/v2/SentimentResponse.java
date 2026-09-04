@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * &lt;p&gt;Provides information about the sentiment expressed in a user&#x27;s response in a conversation. Sentiments are determined using Amazon Comprehend. Sentiments are only returned if they are enabled for the bot.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href&#x3D;\&quot;https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html\&quot;&gt; Determine Sentiment &lt;/a&gt; in the &lt;i&gt;Amazon Comprehend developer guide&lt;/i&gt;.&lt;/p&gt;
  */
-@javax.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
+@jakarta.annotation.Generated(value = "ch.ivyteam.ivy.jaxrs.client.openapi.codegen.OpenApiCodegen$1", date = "2021-08-19T08:34:06.422757+02:00[Europe/Zurich]")
 public class SentimentResponse {
   @JsonProperty("sentiment")
   private SentimentType sentiment = null;
