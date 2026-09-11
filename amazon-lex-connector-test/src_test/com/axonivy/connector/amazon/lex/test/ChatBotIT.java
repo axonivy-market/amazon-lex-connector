@@ -1,20 +1,25 @@
 package com.axonivy.connector.amazon.lex.test;
 
-import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.appear;
+import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
+import com.axonivy.connector.amazon.lex.test.mock.MockAmazonLex;
 import com.axonivy.ivy.webtest.IvyWebTest;
 import com.axonivy.ivy.webtest.engine.EngineUrl;
+import com.axonivy.ivy.webtest.engine.WebAppFixture;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+
+import ch.ivyteam.ivy.rest.client.mapper.JsonFeature;
 
 /**
  * Test the Amazon Lex Demo
@@ -23,7 +28,11 @@ import com.codeborne.selenide.SelenideElement;
 public class ChatBotIT {
 
   @Test
-  public void chatBot() {
+  public void chatBot(WebAppFixture fixture) {
+    var lexClient = "RestClients.Amazon-Lex-Amazon-Lex-Runtime-V2";
+    fixture.config(lexClient + ".Url", EngineUrl.createRestUrl(MockAmazonLex.PATH_SUFFIX));
+    fixture.config(lexClient + ".Features", List.of(JsonFeature.class.getName()));
+
     // valid links can be copied from the start page of the internal web-browser
     open(EngineUrl.createProcessUrl("amazon-lex-connector-demo/17B2F6A64C6C86D0/chatBot.ivp"));
 
