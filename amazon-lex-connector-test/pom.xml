@@ -12,6 +12,9 @@
   <artifactId>amazon-lex-connector-test</artifactId>
   <version>14.0.0-SNAPSHOT</version>
   <packaging>iar-integration-test</packaging>
+  <properties>
+    <amazon.lex.e2e>false</amazon.lex.e2e>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>com.axonivy.ivy.api.test</groupId>
@@ -27,6 +30,11 @@
     <dependency>
       <groupId>com.axonivy.ivy.api</groupId>
       <artifactId>ivy-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <repositories>
@@ -76,6 +84,14 @@
     </pluginManagement>
     <plugins>
       <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <configuration>
+          <systemPropertyVariables>
+            <amazon.lex.e2e>${amazon.lex.e2e}</amazon.lex.e2e>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>com.axonivy.ivy.ci</groupId>
         <artifactId>project-build-plugin</artifactId>
         <extensions>true</extensions>
@@ -88,4 +104,12 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>e2e</id>
+      <properties>
+        <amazon.lex.e2e>true</amazon.lex.e2e>
+      </properties>
+    </profile>
+  </profiles>
 </project>
