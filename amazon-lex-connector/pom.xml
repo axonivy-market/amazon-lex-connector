@@ -14,13 +14,13 @@
   <packaging>iar</packaging>
   <dependencies>
     <dependency>
-      <groupId>com.axonivy.connector.aws</groupId>
-      <artifactId>amazon-aws4-authenticator</artifactId>
-      <version>0.0.9</version>
-    </dependency>
-    <dependency>
       <groupId>com.axonivy.ivy.api</groupId>
       <artifactId>ivy-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.axonivy.connector.aws</groupId>
+      <artifactId>amazon-aws4-authenticator</artifactId>
+      <version>1.0.0</version>
     </dependency>
   </dependencies>
   <repositories>
