@@ -1,0 +1,10 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "Message",
+  "namespace" : "com.axonivy.connector.amazon.lex.demo",
+  "fields" : [ {
+    "name" : "what"
+  }, {
+    "name" : "icon"
+  } ]
+}
